@@ -5,10 +5,10 @@ function solveEquation(equation) {
   let b = getB(equation);
   let c = getC(equation);
   let D = getD(a, b, c);
-  console.log('a: ', a);
-  console.log('b: ', b);
-  console.log('c: ', c);
-  console.log('D: ', D);
+  // console.log('a: ', a);
+  // console.log('b: ', b);
+  // console.log('c: ', c);
+  // console.log('D: ', D);
 
   if (D < 0) {
     // console.log(' new Array(0): ',  new Array(0));
@@ -18,7 +18,7 @@ function solveEquation(equation) {
     return [Math.round(-b / (2 * a))];
   } else if (D > 0) {
     // console.log('new Array(getX1(a, b, D), getX2(a, b, D)): ', new Array(getX1(a, b, D), getX2(a, b, D)));
-    return new Array(getX2(a, b, D), getX1(a, b, D));
+    return new Array(getX1(a, b, D), getX2(a, b, D)).sort();
   }
 
   function getA(equationString) {
